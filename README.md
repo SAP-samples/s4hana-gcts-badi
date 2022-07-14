@@ -1,41 +1,38 @@
-# SAP-samples/repository-template
-This default template for SAP Samples repositories includes files for README, LICENSE, and .reuse/dep5. All repositories on github.com/SAP-samples will be created based on this template.
-
-# Containing Files
-
-1. The LICENSE file:
-In most cases, the license for SAP sample projects is `Apache 2.0`.
-
-2. The .reuse/dep5 file: 
-The [Reuse Tool](https://reuse.software/) must be used for your samples project. You can find the .reuse/dep5 in the project initial. Please replace the parts inside the single angle quotation marks < > by the specific information for your repository.
-
-3. The README.md file (this file):
-Please edit this file as it is the primary description file for your project. You can find some placeholder titles for sections below.
-
-# [Title]
-<!-- Please include descriptive title -->
-
 <!--- Register repository https://api.reuse.software/register, then add REUSE badge:
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/REPO-NAME)](https://api.reuse.software/info/github.com/SAP-samples/REPO-NAME)
 -->
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/s4hana-gcts-badi)](https://api.reuse.software/info/github.com/SAP-samples/s4hana-gcts-badi)
+
+# Integrating gCTS with Transport Organizer processes
 
 ## Description
-<!-- Please include SEO-friendly description -->
+Git-enabled Change and Transport System (gCTS) enables you to manage your ABAP change and transport management processes using Git as an external version management system. You can use it to leverage the functions of Git repositories and to set up continuous integration and delivery processes (CI/CD) for ABAP. The aim of gCTS is to allow DevOps processes for ABAP, as well.
+
+* You can find more information about gCTS in general on the SAP Help Portal at [Git-Enabled Change and Transport System](https://help.sap.com/docs/ABAP_PLATFORM_NEW/4a368c163b08418890a406d413933ba7/f319b168e87e42149e25e13c08d002b9.html)
+* You can use the coding provided in this repository if you would like to integrate your ABAP development processes with gCTS to enable task-based committing and to integrate the gCTS Regsitry in the process of releasing a task
+* You can find a detailed description of the BAdI implemetation, its options and functionality in this SAP Community blog post [Integrating gCTS with Transport Organizer processes](https://blogs.sap.com/2022/05/24/integrating-gcts-with-transport-organizer-processes/)
 
 ## Requirements
+- your ABAP system is on SAP S/4HANA 2020 SPS2 at least
+- you have gCTS configured
+- you have SAP Note 3204481 - [gCTS: Fix for missing objects when importing into a repository with a subdirectory](https://launchpad.support.sap.com/#/notes/3204481) implemented 
 
 ## Download and Installation
+- fork this repository
+- connect your ABAP development system to the forked repository via gCTS
+- clone it to your ABAP development system
+A detailed description is provided in the blog post [Integrating gCTS with Transport Organizer processes](https://blogs.sap.com/2022/05/23/integrating-gcts…anizer-processes/) in SAP Community
 
 ## Known Issues
-<!-- You may simply state "No known issues. -->
+None currently known
 
 ## How to obtain support
-[Create an issue](https://github.com/SAP-samples/<repository-name>/issues) in this repository if you find a bug or have questions about the content.
+[Create an issue](https://github.com/SAP-samples/s4hana-gcts-badi/issues) in this repository if you find a bug or have questions about the content.
  
-For additional support, [ask a question in SAP Community](https://answers.sap.com/questions/ask.html).
+For additional support, [ask a question in SAP Community](https://answers.sap.com/questions/ask.html). Use the tag 'Software Logistics - Change Control and Transport'
 
 ## Contributing
 If you wish to contribute code, offer fixes or improvements, please send a pull request. Due to legal reasons, contributors will be asked to accept a DCO when they create the first pull request to this project. This happens in an automated fashion during the submission process. SAP uses [the standard DCO text of the Linux Foundation](https://developercertificate.org/).
 
 ## License
-Copyright (c) 2022 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSE) file.
+Copyright (c) 2022 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
