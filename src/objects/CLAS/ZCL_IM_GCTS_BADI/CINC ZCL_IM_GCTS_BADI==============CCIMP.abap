@@ -259,6 +259,16 @@ class ltcl_gcts_general_functions definition.
         !iv_package     type devclass
       returning
         value(rv_found) type boolean .
+
+    "! Private class method to retrieve the parent packages of a package
+    "!
+    "! @parameter package     | package name for which the parent needs to retrieved
+    "!
+    "! @parameter r_packages     | list of packages
+    class-methods get_parent_packages
+      importing
+                package           type devclass
+      returning value(r_packages) type cl_cts_abap_vcs_organizer_fac=>tt_object.
 endclass.
 
 class ltcl_gcts_general_functions implementation.
@@ -857,6 +867,16 @@ class ltcl_gcts_general_functions implementation.
               append ls_object to set_repository_response-resolved_objects.
               is_resolved = abap_true.
             else.
+              data: lt_object_with_packages type standard table of cl_cts_abap_vcs_organizer_fac=>ty_object .
+              clear lt_object_with_packages.
+              if not lines( ls_object-object_for_wbo-e071k ) > 0.
+*               retrieve all the packages and parent packages of the object if not customizing. Only Workbench objects has packages
+                append ls_object-object_for_wbo to lt_object_with_packages.
+                if ls_object-dev_class is not initial.
+                  data(ls_package_heirarchy) = get_parent_packages( package = ls_object-dev_class ).
+                  append lines of ls_package_heirarchy to lt_object_with_packages.
+                endif.
+              endif.
               loop at lt_available_repositories into data(ls_available_repository).
                 if is_resolved = abap_true.
                   exit.
@@ -864,43 +884,42 @@ class ltcl_gcts_general_functions implementation.
                 data(repository) = system->get_repository_by_id( ls_available_repository-id ).
                 data(repository_objects) = repository->get_objects(  ).
                 data(repository_json) = repository->to_json_object(  ).
-                loop at repository_objects into data(ls_repository_objects).
-                  if is_resolved = abap_true.
-                    exit.
-                  endif.
-                  if lines( ls_repository_objects-e071k ) > 0.
-*                 Compare the customizing objects
-                    if ls_repository_objects-object = ls_object-object_for_wbo-obj_name
-                      and ls_repository_objects-pgmid = ls_object-object_for_wbo-pgmid
-                      and ls_repository_objects-type = ls_object-object_for_wbo-object.
-                      loop at ls_object-object_for_wbo-e071k into data(ls_e071k).
-                        if line_exists( ls_repository_objects-e071k[ objname = ls_e071k-objname mastertype = ls_e071k-mastertype mastername = ls_e071k-mastername tabkey = ls_e071k-tabkey ] ).
-                          is_resolved = abap_true.
-                        else.
-                          is_resolved = abap_false.
-                          exit.
-                        endif.
-                      endloop.
-                      if is_resolved = abap_true.
-                        ls_object-associated_repo = repository_json.
-                        ls_object-associated_repo_id = repository_json-rid.
-                        append ls_object to set_repository_response-resolved_objects.
-                        exit.
-                      endif.
-                    endif.
-                  else.
-*                 Workbench objects comparison
-                    if ls_repository_objects-object = ls_object-object_for_wbo-obj_name
-                    and ls_repository_objects-pgmid = ls_object-object_for_wbo-pgmid
-                    and ls_repository_objects-type = ls_object-object_for_wbo-object.
+                if lines( lt_object_with_packages ) > 0.
+*                Process Workbench Objects
+                  loop at lt_object_with_packages into data(ls_object_with_packages).
+                    if line_exists( repository_objects[ object = ls_object_with_packages-obj_name pgmid = ls_object_with_packages-pgmid type = ls_object_with_packages-object ] ).
                       ls_object-associated_repo = repository_json.
                       ls_object-associated_repo_id = repository_json-rid.
                       append ls_object to set_repository_response-resolved_objects.
                       is_resolved = abap_true.
                       exit.
                     endif.
+                  endloop.
+                else.
+*                Process Customizing Objects
+                  if line_exists( repository_objects[ object = ls_object_with_packages-obj_name pgmid = ls_object_with_packages-pgmid type = ls_object_with_packages-object ] ).
+                    data: lt_repo_object_e071k  type if_cts_abap_vcs_client_handler=>tt_e071k .
+                    loop at repository_objects into data(ls_repository_object) where object = ls_object_with_packages-obj_name and pgmid = ls_object_with_packages-pgmid and type = ls_object_with_packages-object.
+                      append lines of ls_repository_object-e071k to lt_repo_object_e071k.
+                    endloop.
+                    loop at ls_object-object_for_wbo-e071k into data(ls_e071k).
+                      if line_exists( lt_repo_object_e071k[ objname = ls_e071k-objname mastertype = ls_e071k-mastertype mastername = ls_e071k-mastername tabkey = ls_e071k-tabkey ] ).
+                        is_resolved = abap_true.
+                      else.
+                        is_resolved = abap_false.
+                        clear lt_repo_object_e071k.
+                        exit.
+                      endif.
+                    endloop.
+                    clear lt_repo_object_e071k.
+                    if is_resolved = abap_true.
+                      ls_object-associated_repo = repository_json.
+                      ls_object-associated_repo_id = repository_json-rid.
+                      append ls_object to set_repository_response-resolved_objects.
+                      exit.
+                    endif.
                   endif.
-                endloop.
+                endif.
               endloop.
             endif.
             if is_resolved = abap_false.
@@ -1008,6 +1027,22 @@ class ltcl_gcts_general_functions implementation.
       endif.
     endloop.
     logger->log_end( action = action ).
+  endmethod.
+
+  method get_parent_packages.
+    cl_package=>load_package(
+             exporting
+               i_package_name = package
+             importing
+               e_package      = data(lo_package)
+             exceptions
+               others         = 1 ).
+    if sy-subrc = 0 and not lo_package is initial and lo_package is bound.
+      append value #( pgmid = if_cts_vcs_file_handler_entity=>co_object_pgmid object = if_cts_vcs_file_handler_entity=>co_object_devc obj_name = lo_package->package_name  ) to r_packages.
+      if not lo_package->super_package_name is initial.
+        append lines of get_parent_packages( package = lo_package->super_package_name ) to r_packages.
+      endif.
+    endif.
   endmethod.
 
 endclass.
@@ -1325,12 +1360,13 @@ class ltcl_gcts_repository_eval implementation.
               exporting
                 message_variable_1 = zcl_im_gcts_badi=>co_no_conflict_fail.
           endif.
-          if check_error_in_logs( 'No Conflicts' ) = abap_true.
-            logger->log_error( action = action info = |Errors exists while checking no conflicts| ).
-            raise exception type cx_cts_abap_vcs_exception
-              exporting
-                message_variable_1 = zcl_im_gcts_badi=>co_no_conflict_fail.
-          endif.
+*          "doesn't work properly if registry was used for object relation detection
+*          if check_error_in_logs( 'No Conflicts' ) = abap_true.
+*            logger->log_error( action = action info = |Errors exists while checking no conflicts| ).
+*            raise exception type cx_cts_abap_vcs_exception
+*              exporting
+*                message_variable_1 = zcl_im_gcts_badi=>co_no_conflict_fail.
+*          endif.
         catch cx_cts_abap_vcs_exception.
           logger->log_error( action = action info = |Error while checking for conflicts| ).
           raise exception type cx_cts_abap_vcs_exception
