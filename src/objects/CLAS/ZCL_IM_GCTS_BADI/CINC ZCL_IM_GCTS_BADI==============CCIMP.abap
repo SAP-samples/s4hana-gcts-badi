@@ -189,7 +189,7 @@ class ltcl_gcts_general_functions definition.
     methods check_user_permission
       importing repository type if_cts_abap_vcs_repository=>ty_repository_json
       raising   cx_cts_abap_vcs_exception
-                cx_cts_github_api_exception
+                cx_cts_git_api_exception
       .
     "! Method to check if the user account is valid for the remote repository
     "!
@@ -198,7 +198,7 @@ class ltcl_gcts_general_functions definition.
       importing repository           type if_cts_abap_vcs_repository=>ty_repository_json
       returning value(rv_user_login) type string
       raising   cx_cts_abap_vcs_exception
-                cx_cts_github_api_exception.
+                cx_cts_git_api_exception.
 
     "! Method to check if the target system specified in the transport request and the repository vsid matches. If the
     "! value of the return is true then the target system check was successful and then further processes can be done
@@ -484,11 +484,18 @@ class ltcl_gcts_general_functions implementation.
         if lines( ty_request-objects ) > 100.
           logger->log_info( action = action info = 'More than 100 objects are added for Synchronous Push. This can lead to timeout' ).
         endif.
+        try.
+            data(system) = cl_cts_abap_vcs_system_factory=>get_instance( )->get_default_system( ).
+            data(repository) = system->get_repository_by_id( id = ls_repository-rid ).
+            data(auto_push) = repository->get_config_by_key( key = if_cts_abap_vcs_config_handler=>co_conf_repo_automatic_push ).
+            data(auto_pull) = repository->get_config_by_key( key = if_cts_abap_vcs_config_handler=>co_conf_repo_automatic_pull ).
+          catch cx_cts_abap_vcs_exception into data(exc).
+        endtry.
         rs_response = cl_cts_abap_vcs_repo_facade=>commit_repository( value #(
                 repository = ls_repository-rid
                 message = commit_text
                 objects = ty_request-objects
-                auto_push = abap_true
+                auto_push = auto_push
               ) ).
       endif.
       if not rs_response-exception is initial or not rs_response-error_log is initial.
@@ -517,7 +524,7 @@ class ltcl_gcts_general_functions implementation.
       endtry.
 
       if lo_repository->get_type(  ) = if_cts_abap_vcs_repository=>co_repo_type_github.
-        data(api) = cl_cts_github_api=>get_instance( api_endpoint = lo_repository->get_api_endpoint( ) ).
+        data(api) = cl_cts_git_api=>if_cts_git_api~get_instance( api_endpoint = lo_repository->get_api_endpoint( ) ).
         data(user) = api->get_user( ).
         data(lo_remote_repository) = api->get_repository_by_name(
             name = lo_repository->get_remote_name( )
@@ -525,7 +532,7 @@ class ltcl_gcts_general_functions implementation.
         ).
         data(lv_permission) = lo_remote_repository->get_collaborator_permission( username = user->get_login(  ) )-permission.
         if lv_permission is initial or lv_permission = 'read' or lv_permission = 'READ' or lv_permission = 'triage' or lv_permission = 'TRIAGE'.
-          raise exception type cx_cts_github_api_exception.
+          raise exception type cx_cts_git_api_exception.
         endif.
       endif.
     endif.
@@ -536,7 +543,7 @@ class ltcl_gcts_general_functions implementation.
       data(lo_system) = cl_cts_abap_vcs_system_factory=>get_instance( )->get_default_system( ).
       data(lo_repository) = lo_system->get_repository_by_id( id = repository-rid ).
       if lo_repository->get_type(  ) = if_cts_abap_vcs_repository=>co_repo_type_github.
-        data(api) = cl_cts_github_api=>get_instance( api_endpoint = lo_repository->get_api_endpoint( ) ).
+        data(api) = cl_cts_git_api=>if_cts_git_api~get_instance( api_endpoint = lo_repository->get_api_endpoint( ) ).
         data(user) = api->get_user( ).
         rv_user_login = user->get_login(  ).
       endif.

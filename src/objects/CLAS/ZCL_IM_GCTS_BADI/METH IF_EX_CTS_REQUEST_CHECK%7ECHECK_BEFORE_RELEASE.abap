@@ -46,6 +46,8 @@
           data(prepared_objects) = lo_gcts_general_functions->prepare_objects_for_push( tr_objects = objects tr_keys = keys ).
         catch cx_cts_abap_vcs_exception into data(exc).
           logger->log_error( action = action info = 'gCTS BAdI Error during preparation phase, please check the application logs').
+          logger->flush(  ).
+          logger->flush( abap_true ).
           raise cancel.
       endtry.
 *     Check if the badi can be triggered based on the toggle and the information set along with the toggle.
@@ -60,9 +62,13 @@
             data(set_repository_response) = lo_gcts_general_functions->set_repository_for_objects( object_list = prepared_objects vsid = conv #( target_system ) ).
           catch cx_cts_abap_vcs_exception into data(cts_exception).
             logger->log_error( action = action info = 'Error when checking objects in registry').
+            logger->flush(  ).
+            logger->flush( abap_true ).
             raise cancel.
           catch cx_cts_github_api_exception into data(github_exception).
             logger->log_error( action = action info = 'Github Exception').
+            logger->flush(  ).
+            logger->flush( abap_true ).
             raise cancel.
         endtry.
         data: objects_to_push type ltcl_gcts_general_functions=>tt_gcts_badi_object .
@@ -72,8 +78,6 @@
         if lo_gcts_feature_toggles->get_relation_ident_inf_toggles(  )-level = co_level_error and lines( set_repository_response-unresolved_objects ) > 0.
           logger->log_error( action = action info = 'Error : Not all objects have been resolved to a repository.').
           lo_gcts_general_functions->log_unresolved_objects( unresolved_objects = set_repository_response-unresolved_objects ).
-          logger->flush(  ).
-          logger->flush( abap_true ).
           logger->log_end( action = action ).
           message |Error : Not all objects have been resolved to a repository.| type 'E'.
           raise cancel.
@@ -91,18 +95,18 @@
               data(lv_target_check) = lo_gcts_general_functions->target_system_check( repository = ls_repository  tarsystem =  target_system ).
               if lv_target_check = abap_false.
                 logger->log_error( action = action info = |Target system of the transport request and the vSID of the repository { ls_repository-rid } do not match| ).
+                logger->log_end( action = action ).
                 logger->flush(  ).
                 logger->flush( abap_true ).
-                logger->log_end( action = action ).
                 message |Target system of the transport request and the vSID of the repository { ls_repository-rid } do not match| type 'E'.
                 raise cancel.
               endif.
             catch cx_cts_abap_vcs_exception into exc.
               logger->log_error( action = action info = 'The target system check failed due to an exception').
               logger->log_error( action = action info = | { exc->get_message(  ) }| ).
+              logger->log_end( action = action ).
               logger->flush(  ).
               logger->flush( abap_true ).
-              logger->log_end( action = action ).
               message |The target system check failed due to an exception, check Application Logs in SLG1| type 'E'.
               raise cancel.
           endtry.
@@ -111,16 +115,16 @@
               logger->log_info( action = action info = |user for remote repository : { rv_user_check }| ).
             catch cx_cts_abap_vcs_exception.
               logger->log_error( action = action info = 'Git user cannot be authenticated').
+              logger->log_end( action = action ).
               logger->flush(  ).
               logger->flush( abap_true ).
-              logger->log_end( action = action ).
               message |Git user cannot be authenticated, push not possible| type 'E'.
               raise cancel.
-            catch cx_cts_github_api_exception.
+            catch cx_cts_git_api_exception.
               logger->log_error( action = action info = 'Git user cannot be authenticated').
+              logger->log_end( action = action ).
               logger->flush(  ).
               logger->flush( abap_true ).
-              logger->log_end( action = action ).
               message |Git user cannot be authenticated, push not possible| type 'E'.
               raise cancel.
           endtry.
@@ -128,16 +132,16 @@
               lo_gcts_general_functions->check_user_permission( ls_repository ).
             catch cx_cts_abap_vcs_exception into data(gcts_exception).
               logger->log_error( action = action info = |Write permission missing for repository { ls_repository-rid } locally | ).
+              logger->log_end( action = action ).
               logger->flush(  ).
               logger->flush( abap_true ).
-              logger->log_end( action = action ).
               message |Write permission missing for repository { ls_repository-rid } locally | type 'E'.
               raise cancel.
-            catch cx_cts_github_api_exception into data(git_exception).
+            catch cx_cts_git_api_exception into data(git_exception).
               logger->log_error( action = action info = |Cannot release task. Write permission for remote repository { ls_repository-rid } required| ).
+              logger->log_end( action = action ).
               logger->flush(  ).
               logger->flush( abap_true ).
-              logger->log_end( action = action ).
               message |Cannot release task. Write permission for remote repository { ls_repository-rid } required| type 'E'.
               raise cancel.
           endtry.
@@ -148,9 +152,9 @@
               data(lo_repository) = system->get_repository_by_id( ls_repository-rid ).
             catch cx_cts_abap_vcs_exception into gcts_exception.
               logger->log_error( action = action info = 'gCTS Exception').
+              logger->log_end( action = action ).
               logger->flush(  ).
               logger->flush( abap_true ).
-              logger->log_end( action = action ).
               message |System info cannot be retrieved| type 'E'.
               raise cancel.
           endtry.
@@ -165,9 +169,9 @@
             endif.
             if branch_change_successful = abap_false.
               logger->log_error( action = action info = |Repository branch handling failed for { ls_repository-rid } for branch { branch_to_change } | ).
+              logger->log_end( action = action ).
               logger->flush(  ).
               logger->flush( abap_true ).
-              logger->log_end( action = action ).
               message |Repository branch handling failed for { ls_repository-rid }| type 'E'.
               raise cancel.
             endif.
@@ -180,9 +184,9 @@
           endtry.
           if eval_result = abap_false.
             logger->log_error( action = action info = |Repository evaluation failed for { ls_repository-rid } | ).
+            logger->log_end( action = action ).
             logger->flush(  ).
             logger->flush( abap_true ).
-            logger->log_end( action = action ).
             message |Repository evaluation failed for { ls_repository-rid }| type 'E'.
             raise cancel.
           else.
@@ -195,10 +199,10 @@
           data(ls_response) = lo_gcts_general_functions->commit_and_push_to_repo( objects_to_push = objects_to_push
                                                                                 destination_repository = repositories_for_push
                                                                                 commit_text = text  ).
-          if not ls_response-exception is initial or not ls_response-error_log is initial.
+          if not ls_response-exception is initial.
+            logger->log_end( action = action ).
             logger->flush(  ).
             logger->flush( abap_true ).
-            logger->log_end( action = action ).
             message |Error while committing changes| type 'E'.
             raise cancel.
           endif.
