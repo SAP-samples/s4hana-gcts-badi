@@ -1747,9 +1747,13 @@ class ltcl_gcts_branch_handling implementation.
           branch = replace( val = branch_handling_info sub = co_branch_release with = ls_cvers-release ).
         endif.
       elseif dynamic_branch_value = co_branch_attribute.
-        select single * from e070a into @data(ls_e070a) where trkorr = @transport_number and attribute = @co_git_branch.
-        if sy-subrc = 0.
-          branch = replace( val = branch_handling_info sub = co_branch_attribute with = ls_e070a-reference ).
+        select single * from e070 into @data(ls_e070) where trkorr = @transport_number.
+        if sy-subrc = 0 and ls_e070-strkorr is not initial.
+          logger->log_info( action = action info = |Parent TR for retrieving GIT_BRANCH: { ls_e070-strkorr } | ).
+          select single * from e070a into @data(ls_e070a) where trkorr = @ls_e070-strkorr and attribute = @co_git_branch.
+          if sy-subrc = 0.
+            branch = replace( val = branch_handling_info sub = co_branch_attribute with = ls_e070a-reference ).
+          endif.
         endif.
       else.
         /ui2/cl_json=>deserialize(
