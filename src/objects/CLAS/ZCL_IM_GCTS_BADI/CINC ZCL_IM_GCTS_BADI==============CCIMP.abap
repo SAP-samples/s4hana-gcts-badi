@@ -36,6 +36,17 @@ class ltcl_gcts_general_functions definition.
              unresolved_objects type tt_gcts_badi_object,
            end of ty_resolve_object_response.
 
+    types:
+      begin    of          ty_repository_objects_cache,
+        repository_json    type  if_cts_abap_vcs_repository=>ty_repository_json,
+        repository_objects type if_cts_abap_vcs_repository=>tt_objects,
+        repository_id      type scts_abap_vcs_repository_id,
+      end of ty_repository_objects_cache.
+
+    types tt_repository_objects_cache type standard table of ty_repository_objects_cache with default key.
+
+    class-data: repository_cache_table type tt_repository_objects_cache.
+
     data: logger  type ref to if_cts_abap_vcs_logger.
     "! Constructor of the class, sets the value for the package, which would be used for filtering out objects for further gcts processes.
     "!
@@ -233,6 +244,16 @@ class ltcl_gcts_general_functions definition.
     methods get_unique_repository
       returning value(rv_unique_repository) type abap_boolean.
 
+    "! Class method to retrieve the parent packages of a package
+    "!
+    "! @parameter package        | package name for which the parent needs to retrieved
+    "!
+    "! @parameter r_packages     | list of packages
+    class-methods get_parent_packages
+      importing
+                package           type devclass
+      returning value(r_packages) type cl_cts_abap_vcs_organizer_fac=>tt_object.
+
   private section.
     data: package type string.
     data: commit_async_toggle        type boolean,
@@ -259,16 +280,6 @@ class ltcl_gcts_general_functions definition.
         !iv_package     type devclass
       returning
         value(rv_found) type boolean .
-
-    "! Private class method to retrieve the parent packages of a package
-    "!
-    "! @parameter package     | package name for which the parent needs to retrieved
-    "!
-    "! @parameter r_packages     | list of packages
-    class-methods get_parent_packages
-      importing
-                package           type devclass
-      returning value(r_packages) type cl_cts_abap_vcs_organizer_fac=>tt_object.
 endclass.
 
 class ltcl_gcts_general_functions implementation.
@@ -888,9 +899,14 @@ class ltcl_gcts_general_functions implementation.
                 if is_resolved = abap_true.
                   exit.
                 endif.
-                data(repository) = system->get_repository_by_id( ls_available_repository-id ).
-                data(repository_objects) = repository->get_objects(  ).
-                data(repository_json) = repository->to_json_object(  ).
+                if line_exists( repository_cache_table[ repository_id = ls_available_repository-id ] ).
+                  data(repository_objects) = repository_cache_table[ repository_id = ls_available_repository-id ]-repository_objects.
+                  data(repository_json) = repository_cache_table[ repository_id = ls_available_repository-id ]-repository_json.
+                else.
+                  data(repository) = system->get_repository_by_id( ls_available_repository-id ).
+                  repository_objects = repository->get_objects(  ).
+                  repository_json = repository->to_json_object(  ).
+                endif.
                 if lines( lt_object_with_packages ) > 0.
 *                Process Workbench Objects
                   loop at lt_object_with_packages into data(ls_object_with_packages).
@@ -1064,17 +1080,9 @@ class ltcl_gcts_badi_trigger definition.
     constants co_badi_trigger type string value 'BADI_TRIGGER_CLASS'.
     constants co_check_badi_trigger type string value 'CHECK_BADI_TRIGGER'.
     data:      logger  type ref to if_cts_abap_vcs_logger.
-    types:
-      begin    of          ty_repository_objects_cache,
-        repository_json    type  if_cts_abap_vcs_repository=>ty_repository_json,
-        repository_objects type if_cts_abap_vcs_repository=>tt_objects,
-        repository_id      type scts_abap_vcs_repository_id,
-      end of ty_repository_objects_cache.
 
-    types tt_repository_objects_cache type standard table of ty_repository_objects_cache with default key.
     types tt_users type standard table of string with default key.
 
-    class-data: repository_cache_table type tt_repository_objects_cache.
     types:
       begin of ty_badi_trigger,
         scope             type string,
@@ -1212,6 +1220,7 @@ class ltcl_gcts_badi_trigger implementation.
           try.
               data(system) = cl_cts_abap_vcs_system_factory=>get_instance( )->get_default_system( ).
               data(lt_available_repositories) = system->get_repositories( refresh = abap_true ).
+              clear ltcl_gcts_general_functions=>repository_cache_table.
               loop at lt_available_repositories into data(ls_available_repisitory).
                 data(repository) = system->get_repository_by_id( ls_available_repisitory-id ).
                 data(repository_objects) = repository->get_objects(  ).
@@ -1219,12 +1228,23 @@ class ltcl_gcts_badi_trigger implementation.
 *               Set cache for repository objects for avoid retrieval again
                 append value #( repository_json = ls_repository_json
                                 repository_objects = repository_objects
-                                repository_id = ls_available_repisitory-id ) to repository_cache_table.
+                                repository_id = ls_available_repisitory-id ) to ltcl_gcts_general_functions=>repository_cache_table.
                 if line_exists( repository_objects[ object = ls_object-object_for_wbo-obj_name pgmid = ls_object-object_for_wbo-pgmid type = ls_object-object_for_wbo-object ] ).
                   logger->log_info( action = action info = |Object { ls_object-object_for_wbo-obj_name },{ ls_object-object_for_wbo-object } exists in repository { ls_available_repisitory-id } | ).
                   logger->log_info( action = action info = |gCTS BAdI trigger check successful for full local object list | ).
                   is_okay = abap_true.
                   return.
+                elseif ls_object-dev_class is not initial.
+*                If the object doesn't exists check for its package and the super packages as well
+                  data(lt_package_heirarchy) = ltcl_gcts_general_functions=>get_parent_packages( package = ls_object-dev_class ).
+                  loop at lt_package_heirarchy into data(ls_super_package).
+                    if line_exists( repository_objects[ object = ls_super_package-obj_name pgmid = ls_super_package-pgmid type = ls_super_package-object ] ).
+                      logger->log_info( action = action info = |Object's super package { ls_super_package-obj_name } exists in repository { ls_available_repisitory-id } | ).
+                      logger->log_info( action = action info = |gCTS BAdI trigger check successful for full local object list | ).
+                      is_okay = abap_true.
+                      return.
+                    endif.
+                  endloop.
                 endif.
               endloop.
             catch cx_cts_abap_vcs_exception into data(exc).
