@@ -1757,7 +1757,7 @@ class ltcl_gcts_branch_handling implementation.
     logger->log_info( action = action info = |Branch handling info : { branch_handling_info } | ).
     data: ls_branch_info_syntax type branch_info_syntax.
     if branch_handling = abap_true and branch_handling_info is not initial.
-      data(dynamic_branch_value) = match( val = branch_handling_info regex = `\{.+\}` ).
+      data(dynamic_branch_value) = match( val = branch_handling_info pcre = `\{.+\}` ).
       if dynamic_branch_value is initial or dynamic_branch_value = ''.
 *         Static branch name
         branch = branch_handling_info.
