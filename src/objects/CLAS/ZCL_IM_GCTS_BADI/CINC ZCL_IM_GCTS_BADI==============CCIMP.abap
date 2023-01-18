@@ -971,7 +971,7 @@ class ltcl_gcts_general_functions implementation.
       data(repositories_data) = system->get_repositories_data( refresh = abap_true ).
       if line_exists( repositories_data[ vsid = vsid ] ).
         data(ls_repository_raw) = repositories_data[ vsid = vsid ].
-        data(ls_repository2) = cl_cts_abap_vcs_api_facade=>get_repository( request = conv #( ls_repository_raw-rid ) ).
+        data(ls_repository2) = cl_cts_abap_vcs_api_facade=>get_repository( request = value #( repository = ls_repository_raw-rid ) ).
         loop at object_list into ls_object.
           ls_object-associated_repo = ls_repository2-result.
           ls_object-associated_repo_id = ls_repository2-result-rid.
