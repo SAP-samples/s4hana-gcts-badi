@@ -120,7 +120,7 @@
               logger->flush( abap_true ).
               message |Git user cannot be authenticated, push not possible| type 'E'.
               raise cancel.
-            catch cx_cts_git_api_exception.
+            catch cx_cts_github_api_exception.
               logger->log_error( action = action info = 'Git user cannot be authenticated').
               logger->log_end( action = action ).
               logger->flush(  ).
@@ -137,7 +137,7 @@
               logger->flush( abap_true ).
               message |Write permission missing for repository { ls_repository-rid } locally | type 'E'.
               raise cancel.
-            catch cx_cts_git_api_exception into data(git_exception).
+            catch cx_cts_github_api_exception into data(git_exception).
               logger->log_error( action = action info = |Cannot release task. Write permission for remote repository { ls_repository-rid } required| ).
               logger->log_end( action = action ).
               logger->flush(  ).
