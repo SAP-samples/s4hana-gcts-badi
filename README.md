@@ -21,7 +21,7 @@ Git-enabled Change and Transport System (gCTS) enables you to manage your ABAP c
 - fork this repository
 - connect your ABAP development system to the forked repository via gCTS
 - clone it to your ABAP development system
-A detailed description is provided in the blog post [Integrating gCTS with Transport Organizer processes](https://blogs.sap.com/2022/05/23/integrating-gcts…anizer-processes/) in SAP Community
+A detailed description is provided in the blog post [Integrating gCTS with Transport Organizer processes](https://blogs.sap.com/2022/05/24/integrating-gcts-with-transport-organizer-processes/) in SAP Community
 
 ## Known Issues
 None currently known
