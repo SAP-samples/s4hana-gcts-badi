@@ -30,6 +30,13 @@
     "TYPE":"N",
     "LENGTH":1,
     "DECIMALS":-1
+   },
+   {
+    "NAME":"MTDTYPE2",
+    "KEY":"",
+    "TYPE":"N",
+    "LENGTH":2,
+    "DECIMALS":-1
    }
   ],
   "properties":

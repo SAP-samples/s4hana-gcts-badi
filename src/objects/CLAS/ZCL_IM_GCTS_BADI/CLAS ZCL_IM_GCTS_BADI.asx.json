@@ -33,10 +33,10 @@
     "EXPOSURE":2,
     "STATE":1,
     "RELEASE":0,
-    "AUTHOR":"SAP",
+    "AUTHOR":"",
     "CREATEDON":"2022-06-01",
-    "CHANGEDBY":"SAP",
-    "CHANGEDON":"2022-06-01",
+    "CHANGEDBY":"",
+    "CHANGEDON":"0000-00-00",
     "CHGDANYBY":"SAP",
     "CHGDANYON":"2022-06-01",
     "CLSEMBED":"",
@@ -85,331 +85,386 @@
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_ASYNC_COMMIT",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_AUTHENTICATION_CHECK",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_BADI_TRIGGER",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_BADI_TRIGGER_INFO",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_BRANCH_HANDLING",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_CHANGES_PULLED_CHECK",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_CHANGES_PULLED_FAIL",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_CHECK_VSID",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_CREATE_BRANCH_TOGGLE",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_INACTIVE_OBJECT_FAIL",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_LEVEL_ERROR",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_LEVEL_INFO",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_LEVEL_WARNING",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_MULTIPLE_TR_FAIL",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_NM_ASYNC_COMMIT",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_NM_AUTHENTICATION_CHECK",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_NM_BADI_TRIGGER",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_NM_BRANCH_HANDLING",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_NM_CHANGES_PULLED_CH",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_NM_CHECK_VSID",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_NM_CREATE_BRANCH_TOGGLE",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_NM_OBJECT_LIST_EVAL",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_NM_RELATION_IDENTIFIER",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_NM_TARGET_SYSTEM_CHECK",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_NM_TECH_STATUS_CHECK",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_NM_UNIQUE_REPOSITORY",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_NM_USER_PERMISSION",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_NM_WARNING_LEVEL_TOGGLE",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_NON_ABAP_SYSTEM_FAIL",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_NON_UNIQUE_VSID_FAIL",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_NO_CONFLICTS_CHECK",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_NO_CONFLICT_FAIL",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_OBJECT_LIST_EVAL",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_REGISTRY_INFO",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_REGISTRY_TOGGLE",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_REPO_RETREIVAL_FAIL",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_REPO_STATUS_CHECK",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_REPO_STATUS_FAIL",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_STATUS_FAIL",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_SUPERPACKAGE",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_TARGET_SYSTEM_CHECK",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_TECH_STATUS_CHECK",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_TOGGLE_MVIEW",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_UNIQUE_REPOSITORY",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_UNIQUE_REPOSITORY_INFO",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_USER_AUTHENTICATION_CHECK",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_USER_PERMISSION",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_VCS_VSID_TYPE_FAIL",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_WARNING_LEVEL_INFO",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"CO_WARNING_LEVEL_TOGGLE",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"P_TOGGLE_COLUMN",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"P_VALUE_ADDITIONAL_INFO",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"P_VALUE_COLUMN",
     "CMPTYPE":0,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"TY_OBJECTS_TO_PUSH",
     "CMPTYPE":3,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
     "CMPNAME":"TY_TADIR",
     "CMPTYPE":3,
-    "MTDTYPE":0
+    "MTDTYPE":0,
+    "MTDTYPE2":0
    }
   ]
  },
@@ -430,7 +485,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -472,7 +527,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -487,7 +544,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -529,7 +586,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -544,7 +603,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -586,7 +645,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -601,7 +662,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -643,7 +704,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -658,7 +721,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -700,7 +763,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -715,7 +780,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -757,7 +822,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -772,7 +839,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -814,7 +881,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -829,7 +898,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -871,7 +940,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -886,7 +957,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -928,7 +999,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -943,7 +1016,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -985,7 +1058,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -1000,7 +1075,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -1042,7 +1117,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -1057,7 +1134,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -1099,7 +1176,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -1114,7 +1193,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -1156,7 +1235,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -1171,7 +1252,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -1213,7 +1294,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -1228,7 +1311,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -1270,7 +1353,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -1285,7 +1370,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -1327,7 +1412,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -1342,7 +1429,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -1384,7 +1471,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -1399,7 +1488,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -1441,7 +1530,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -1456,7 +1547,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -1498,7 +1589,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -1513,7 +1606,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -1555,7 +1648,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -1570,7 +1665,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -1612,7 +1707,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -1627,7 +1724,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -1669,7 +1766,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -1684,7 +1783,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -1726,7 +1825,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -1741,7 +1842,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -1783,7 +1884,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -1798,7 +1901,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -1840,7 +1943,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -1855,7 +1960,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -1897,7 +2002,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -1912,7 +2019,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -1954,7 +2061,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -1969,7 +2078,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -2011,7 +2120,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -2026,7 +2137,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -2068,7 +2179,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -2083,7 +2196,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -2125,7 +2238,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -2140,7 +2255,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -2182,7 +2297,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -2197,7 +2314,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -2239,7 +2356,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -2254,7 +2373,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -2296,7 +2415,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -2311,7 +2432,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -2353,7 +2474,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -2368,7 +2491,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -2410,7 +2533,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -2425,7 +2550,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -2467,7 +2592,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -2482,7 +2609,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -2524,7 +2651,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -2539,7 +2668,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -2581,7 +2710,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -2596,7 +2727,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -2638,7 +2769,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -2653,7 +2786,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -2695,7 +2828,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -2710,7 +2845,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -2752,7 +2887,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -2767,7 +2904,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -2809,7 +2946,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -2824,7 +2963,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -2866,7 +3005,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -2881,7 +3022,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -2923,7 +3064,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -2938,7 +3081,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -2980,7 +3123,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -2995,7 +3140,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -3037,7 +3182,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -3052,7 +3199,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -3094,7 +3241,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -3109,7 +3258,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -3151,7 +3300,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -3166,7 +3317,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -3208,7 +3359,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -3223,7 +3376,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -3265,7 +3418,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -3280,7 +3435,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -3322,7 +3477,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":36,
-    "TYPESRC":"p_toggle_column(20)         type c"
+    "TYPESRC":"p_toggle_column(20)         type c",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -3337,7 +3494,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -3379,7 +3536,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":36,
-    "TYPESRC":"p_value_additional_info(20) type c"
+    "TYPESRC":"p_value_additional_info(20) type c",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -3394,7 +3553,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -3436,7 +3595,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":36,
-    "TYPESRC":"p_value_column(20)          type c"
+    "TYPESRC":"p_value_column(20)          type c",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -3451,7 +3612,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -3493,7 +3654,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":93,
-    "TYPESRC":"ty_objects_to_push type table of if_cts_abap_vcs_transport_req=>ty_objects with default key"
+    "TYPESRC":"ty_objects_to_push type table of if_cts_abap_vcs_transport_req=>ty_objects with default key",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    },
    {
     "CLSNAME":"ZCL_IM_GCTS_BADI",
@@ -3508,7 +3671,7 @@
     "DISPID":0,
     "R3RELEASE":"",
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "MTDDECLTYP":0,
@@ -3550,7 +3713,9 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":56,
-    "TYPESRC":"ty_tadir type standard table of tadir with default key"
+    "TYPESRC":"ty_tadir type standard table of tadir with default key",
+    "MTDSQLSERVICE":"",
+    "MTDAMDPCLNTINDEP":""
    }
   ]
  },
@@ -3900,7 +4065,7 @@
     "VERSION":1,
     "STATE":1,
     "AUTHOR":"",
-    "CREATEDON":"0000-00-00",
+    "CREATEDON":"2025-08-11",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "RELTYPE":1,
@@ -3996,8 +4161,6 @@
     "DBNA":"D$",
     "SUBC":"I",
     "APPL":"S",
-    "UNAM":"SAP",
-    "RMAND":"000",
     "FIXPT":"X",
     "LDBNAME":"D$S",
     "UCCHECK":"X"
@@ -4009,8 +4172,6 @@
     "DBNA":"D$",
     "SUBC":"I",
     "APPL":"S",
-    "UNAM":"SAP",
-    "RMAND":"000",
     "FIXPT":"X",
     "LDBNAME":"D$S",
     "UCCHECK":"X"
@@ -4022,8 +4183,6 @@
     "DBNA":"D$",
     "SUBC":"I",
     "APPL":"S",
-    "UNAM":"SAP",
-    "RMAND":"000",
     "FIXPT":"X",
     "LDBNAME":"D$S",
     "UCCHECK":"X"
@@ -4035,8 +4194,6 @@
     "DBNA":"D$",
     "SUBC":"I",
     "APPL":"S",
-    "UNAM":"SAP",
-    "RMAND":"000",
     "FIXPT":"X",
     "LDBNAME":"D$S",
     "UCCHECK":"X"
@@ -4048,8 +4205,6 @@
     "DBNA":"D$",
     "SUBC":"I",
     "APPL":"S",
-    "UNAM":"SAP",
-    "RMAND":"000",
     "FIXPT":"X",
     "LDBNAME":"D$S",
     "UCCHECK":"X"
@@ -4061,8 +4216,6 @@
     "DBNA":"D$",
     "SUBC":"I",
     "APPL":"S",
-    "UNAM":"SAP",
-    "RMAND":"000",
     "FIXPT":"X",
     "LDBNAME":"D$S",
     "UCCHECK":"X"
@@ -4074,8 +4227,6 @@
     "DBNA":"D$",
     "SUBC":"I",
     "APPL":"S",
-    "UNAM":"SAP",
-    "RMAND":"000",
     "FIXPT":"X",
     "LDBNAME":"D$S",
     "UCCHECK":"X"
@@ -4087,8 +4238,6 @@
     "DBNA":"D$",
     "SUBC":"I",
     "APPL":"S",
-    "UNAM":"SAP",
-    "RMAND":"000",
     "FIXPT":"X",
     "LDBNAME":"D$S",
     "UCCHECK":"X"
@@ -4100,8 +4249,6 @@
     "DBNA":"D$",
     "SUBC":"I",
     "APPL":"S",
-    "UNAM":"SAP",
-    "RMAND":"000",
     "FIXPT":"X",
     "LDBNAME":"D$S",
     "UCCHECK":"X"
@@ -4113,8 +4260,6 @@
     "DBNA":"D$",
     "SUBC":"I",
     "APPL":"S",
-    "UNAM":"SAP",
-    "RMAND":"000",
     "FIXPT":"X",
     "LDBNAME":"D$S",
     "UCCHECK":"X"
@@ -4127,8 +4272,6 @@
     "DBNA":"D$",
     "SUBC":"K",
     "APPL":"S",
-    "UNAM":"SAP",
-    "RMAND":"000",
     "FIXPT":"X",
     "LDBNAME":"D$S",
     "UCCHECK":"X"
@@ -4139,8 +4282,6 @@
     "DBNA":"D$",
     "SUBC":"I",
     "APPL":"S",
-    "UNAM":"SAP",
-    "RMAND":"000",
     "FIXPT":"X",
     "LDBNAME":"D$S",
     "UCCHECK":"X"
@@ -4152,8 +4293,6 @@
     "DBNA":"D$",
     "SUBC":"I",
     "APPL":"S",
-    "UNAM":"SAP",
-    "RMAND":"000",
     "FIXPT":"X",
     "LDBNAME":"D$S",
     "UCCHECK":"X"

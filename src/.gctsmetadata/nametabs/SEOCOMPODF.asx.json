@@ -387,6 +387,20 @@
     "TYPE":"C",
     "LENGTH":9999,
     "DECIMALS":-1
+   },
+   {
+    "NAME":"MTDSQLSERVICE",
+    "KEY":"",
+    "TYPE":"C",
+    "LENGTH":1,
+    "DECIMALS":-1
+   },
+   {
+    "NAME":"MTDAMDPCLNTINDEP",
+    "KEY":"",
+    "TYPE":"C",
+    "LENGTH":1,
+    "DECIMALS":-1
    }
   ],
   "properties":

@@ -37,6 +37,13 @@
     "TYPE":"C",
     "LENGTH":1,
     "DECIMALS":-1
+   },
+   {
+    "NAME":"REPOID",
+    "KEY":"",
+    "TYPE":"C",
+    "LENGTH":64,
+    "DECIMALS":-1
    }
   ],
   "properties":
